@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.alexvasilkov.gestures.views.GestureImageView
-        android:id="@+id/photo_full_image"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:gest_doubleTapZoom="3"
-        app:gest_maxZoom="10" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <ProgressBar
-        android:id="@+id/photo_full_progress"
-        android:layout_width="320dp"
-        android:layout_height="320dp"
-        android:layout_gravity="center"
-        android:alpha="0"
-        android:padding="142dp" />
+        <com.alexvasilkov.gestures.views.GestureImageView
+            android:id="@+id/photo_full_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:gest_doubleTapZoom="3"
+            app:gest_maxZoom="10" />
 
-</FrameLayout>
+        <ProgressBar
+            android:id="@+id/photo_full_progress"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:alpha="0"
+            android:padding="142dp" />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="2000dp"
+            android:background="#FF0000" />
+
+    </LinearLayout>
+</ScrollView>
